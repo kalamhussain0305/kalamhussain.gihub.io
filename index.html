@@ -239,5 +239,28 @@ video editing and new digital skills.
 
 </footer>
 <a href="https://wa.me/918269832372" class="whatsapp">💬</a>
+<a href="https://wa.me/918269832372" class="whatsapp">💬</a>
+
+<script>
+const words = [
+"AI Learner",
+"Web Developer",
+"Mobile Repair",
+"Video Editor"
+];
+
+let i = 0;
+
+function changeText() {
+  document.getElementById("typing").textContent = words[i];
+  i = (i + 1) % words.length;
+}
+
+changeText();
+setInterval(changeText, 2000);
+</script>
+
+</body>
+</html>
 </body>
 </html>
