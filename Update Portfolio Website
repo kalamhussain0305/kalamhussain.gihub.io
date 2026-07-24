@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kalam Hussain | Portfolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#0d1117;
+color:white;
+}
+
+header{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+background:linear-gradient(135deg,#0d1117,#161b22,#1f2937);
+}
+
+.hero h1{
+font-size:55px;
+}
+
+.hero h2{
+color:#00d4ff;
+margin:15px 0;
+}
+
+.hero p{
+font-size:18px;
+opacity:.9;
+}
+
+.btn{
+display:inline-block;
+margin-top:30px;
+padding:14px 35px;
+background:#00d4ff;
+color:black;
+font-weight:bold;
+text-decoration:none;
+border-radius:40px;
+transition:.3s;
+}
+
+.btn:hover{
+transform:scale(1.08);
+}
+
+section{
+padding:80px 10%;
+}
+
+.title{
+font-size:36px;
+margin-bottom:25px;
+color:#00d4ff;
+}
+
+.card{
+background:#161b22;
+padding:25px;
+border-radius:15px;
+margin-bottom:20px;
+box-shadow:0 0 15px rgba(0,212,255,.15);
+}
+
+ul li{
+margin:12px 0;
+}
+
+footer{
+text-align:center;
+padding:30px;
+background:#161b22;
+margin-top:50px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="hero">
+
+<h1>Kalam Hussain</h1>
+
+<h2>B.Sc Mathematics | DCA</h2>
+
+<p>
+Computer Skills • Mobile Repair • Video Editing
+</p>
+
+<a href="#about" class="btn">Explore</a>
+
+</div>
+
+</header>
+
+<section id="about">
+
+<h2 class="title">About Me</h2>
+
+<div class="card">
+
+<p>
+
+I am Kalam Hussain.
+I have completed B.Sc Mathematics and DCA.
+I enjoy learning computer technology,
+basic mobile repairing,
+video editing and new digital skills.
+
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="title">Education</h2>
+
+<div class="card">
+
+<ul>
+
+<li>B.Sc Mathematics</li>
+
+<li>DCA (Diploma in Computer Applications)</li>
+
+</ul>
+
+</div>
+
+</section>
+<section>
+
+<h2 class="title">Skills</h2>
+
+<div class="card">
+
+<ul>
+
+<li>MS Word</li>
+
+<li>MS Excel</li>
+
+<li>Adobe Photoshop</li>
+
+<li>Hindi & English Typing</li>
+
+<li>Basic Mobile Repair</li>
+
+<li>Basic Video Editing</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="title">Projects</h2>
+
+<div class="card">
+
+<p>
+• Portfolio Website<br><br>
+• Basic Mobile Repair Learning<br><br>
+• Computer Applications & Office Work<br><br>
+• Basic Graphic Design
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="title">Contact</h2>
+
+<div class="card">
+
+<p><b>Name:</b> Kalam Hussain</p>
+
+<p><b>Phone:</b> +91 8269832372</p>
+
+<p><b>Status:</b> Available for Learning & Work</p>
+
+</div>
+
+</section>
+<footer>
+
+<h3>Thank You for Visiting</h3>
+
+<p>
+© 2026 Kalam Hussain. All Rights Reserved.
+</p>
+
+</footer>
+
+</body>
+</html>
