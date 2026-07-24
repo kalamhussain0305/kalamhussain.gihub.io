@@ -3,10 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Kalam Hussain | Portfolio</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -19,121 +18,198 @@ scroll-behavior:smooth;
 }
 
 body{
-background:#0d1117;
-color:white;
+background:#0b1120;
+color:#fff;
 }
 
 header{
-height:100vh;
+width:100%;
+padding:18px 8%;
+background:#111827;
+position:fixed;
+top:0;
+left:0;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:1000;
+box-shadow:0 5px 15px rgba(0,0,0,.3);
+}
+
+.logo{
+font-size:28px;
+font-weight:700;
+color:#00d4ff;
+}
+
+nav a{
+color:#fff;
+text-decoration:none;
+margin-left:20px;
+transition:.3s;
+}
+
+nav a:hover{
+color:#00d4ff;
+}
+
+.hero{
+min-height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
-text-align:center;
-padding:20px;
-background:linear-gradient(135deg,#0d1117,#161b22,#1f2937);
+flex-wrap:wrap;
+padding:120px 8% 60px;
+gap:50px;
 }
 
-.hero h1{
-font-size:55px;
+.left{
+flex:1;
+min-width:300px;
 }
 
-.hero h2{
+.left h3{
+font-size:28px;
 color:#00d4ff;
+}
+
+.left h1{
+font-size:60px;
 margin:15px 0;
 }
 
-.hero p{
-font-size:18px;
-opacity:.9;
+.left h2{
+font-size:24px;
+margin-bottom:15px;
+color:#d1d5db;
+}
+
+#typing{
+font-size:22px;
+color:#00d4ff;
+font-weight:bold;
+margin-bottom:20px;
+display:block;
 }
 
 .btn{
 display:inline-block;
-margin-top:30px;
-padding:14px 35px;
+padding:14px 30px;
 background:#00d4ff;
-color:black;
-font-weight:bold;
+color:#111827;
 text-decoration:none;
-border-radius:40px;
-transition:.3s;
+border-radius:30px;
+font-weight:bold;
+margin-top:20px;
 }
 
-.btn:hover{
-transform:scale(1.08);
+.right{
+flex:1;
+text-align:center;
+min-width:300px;
 }
 
+.right img{
+width:300px;
+height:300px;
+border-radius:50%;
+object-fit:cover;
+border:6px solid #00d4ff;
+box-shadow:0 0 30px #00d4ff;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+Kalam
+</div>
+
+<nav>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="left">
+
+<h3>Hello, I'm</h3>
+
+<h1>Kalam Hussain</h1>
+
+<h2>B.Sc Mathematics | DCA</h2>
+
+<span id="typing"></span>
+
+<p>
+Passionate about AI, Web Development,
+Computer Skills and Mobile Repair.
+</p>
+
+<a href="#contact" class="btn">
+Contact Me
+</a>
+
+</div>
+
+<div class="right">
+
+<img src="profilejpg.png" alt="Kalam Hussain">
+
+</div>
+
+</sectio>
+  <style>
 section{
-padding:80px 10%;
+padding:80px 8%;
 }
 
 .title{
-font-size:36px;
-margin-bottom:25px;
+font-size:38px;
 color:#00d4ff;
+margin-bottom:30px;
 }
 
 .card{
 background:#161b22;
 padding:25px;
-border-radius:15px;
-margin-bottom:20px;
+border-radius:18px;
 box-shadow:0 0 15px rgba(0,212,255,.15);
+margin-bottom:25px;
+line-height:1.8;
 }
 
-ul li{
-margin:12px 0;
+.skill{
+margin-bottom:20px;
 }
 
-footer{
-text-align:center;
-padding:30px;
-background:#161b22;
-margin-top:50px;
+.skill p{
+margin-bottom:8px;
 }
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-width:60px;
-height:60px;
-border-radius:50%;
-display:flex;
-justify-content:center;
-align-items:center;
-font-size:30px;
-text-decoration:none;
-box-shadow:0 0 15px rgba(0,0,0,.3);
-z-index:1000;
+
+.bar{
+width:100%;
+height:10px;
+background:#333;
+border-radius:10px;
+overflow:hidden;
+}
+
+.fill{
+height:100%;
+background:#00d4ff;
+border-radius:10px;
 }
 </style>
-</head>
-<body>
-
-<header>
-
-<div class="hero">
-
-<h1>Kalam Hussain</h1>
-
-<h2>B.Sc Mathematics | DCA</h2>
-<h3><span id="typing"></span></h3>
-<img src="profilejpg.png"
-     alt="Kalam Hussain"
-     style="width:220px;height:220px;border-radius:50%;
-     object-fit:cover;border:5px solid #00d4ff;
-     margin:25px auto;display:block;">
-<p>
-Computer Skills • Mobile Repair • Video Editing
-</p>
-
-<a href="#about" class="btn">Explore</a>
-
-</div>
-
-</header>
 
 <section id="about">
 
@@ -142,13 +218,11 @@ Computer Skills • Mobile Repair • Video Editing
 <div class="card">
 
 <p>
-
-I am Kalam Hussain.
-I have completed B.Sc Mathematics and DCA.
-I enjoy learning computer technology,
-basic mobile repairing,
-video editing and new digital skills.
-
+Hello! I'm <b>Kalam Hussain</b>. I have completed
+B.Sc Mathematics and DCA.
+I enjoy learning Artificial Intelligence,
+Web Development, Computer Applications,
+Mobile Repair and Video Editing.
 </p>
 
 </div>
@@ -162,104 +236,160 @@ video editing and new digital skills.
 <div class="card">
 
 <ul>
-
 <li>B.Sc Mathematics</li>
-
 <li>DCA (Diploma in Computer Applications)</li>
-
 </ul>
 
 </div>
 
 </section>
-<section>
+
+<section id="skills">
 
 <h2 class="title">Skills</h2>
 
 <div class="card">
 
-<ul>
+<div class="skill">
+<p>MS Word</p>
+<div class="bar"><div class="fill" style="width:95%"></div></div>
+</div>
 
-<li>MS Word</li>
+<div class="skill">
+<p>MS Excel</p>
+<div class="bar"><div class="fill" style="width:85%"></div></div>
+</div>
 
-<li>MS Excel</li>
+<div class="skill">
+<p>Adobe Photoshop</p>
+<div class="bar"><div class="fill" style="width:80%"></div></div>
+</div>
 
-<li>Adobe Photoshop</li>
+<div class="skill">
+<p>Basic Mobile Repair</p>
+<div class="bar"><div class="fill" style="width:75%"></div></div>
+</div>
 
-<li>Hindi & English Typing</li>
-
-<li>Basic Mobile Repair</li>
-
-<li>Basic Video Editing</li>
-
-</ul>
+<div class="skill">
+<p>Video Editing</p>
+<div class="bar"><div class="fill" style="width:70%"></div></div>
+</div>
 
 </div>
 
-</section>
-
-<section>
+</section> 
+<section id="projects">
 
 <h2 class="title">Projects</h2>
 
 <div class="card">
+<h3>🌐 Personal Portfolio Website</h3>
+<p>A responsive portfolio website created using HTML & CSS and hosted on GitHub Pages.</p>
+</div>
 
-<p>
-• Portfolio Website<br><br>
-• Basic Mobile Repair Learning<br><br>
-• Computer Applications & Office Work<br><br>
-• Basic Graphic Design
-</p>
+<div class="card">
+<h3>📱 Mobile Repair Learning</h3>
+<p>Learning basic mobile hardware, software, and troubleshooting.</p>
+</div>
 
+<div class="card">
+<h3>🤖 AI Learning</h3>
+<p>Exploring AI tools for content creation, productivity, and web development.</p>
 </div>
 
 </section>
 
-<section>
+<section id="contact">
 
-<h2 class="title">Contact</h2>
+<h2 class="title">Contact Me</h2>
 
 <div class="card">
 
-<p><b>Name:</b> Kalam Hussain</p>
+<p><strong>Name:</strong> Kalam Hussain</p>
+<p><strong>Phone:</strong> +91 8269832372</p>
+<p><strong>Email:</strong> your@email.com</p>
 
-<p><b>Phone:</b> +91 8269832372</p>
-
-<p><b>Status:</b> Available for Learning & Work</p>
+<a href="https://wa.me/918269832372" class="btn">
+💬 Chat on WhatsApp
+</a>
 
 </div>
 
 </section>
-<footer>
 
-<h3>Thank You for Visiting</h3>
+<footer style="text-align:center;padding:30px;background:#111827;margin-top:40px;">
 
-<p>
-© 2026 Kalam Hussain. All Rights Reserved.
-</p>
+<p>© 2026 Kalam Hussain | All Rights Reserved</p>
 
 </footer>
-<a href="https://wa.me/918269832372" class="whatsapp">💬</a>
 
+<a href="https://wa.me/918269832372"
+class="whatsapp">💬</a>
+<style>
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+width:60px;
+height:60px;
+background:#25D366;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:30px;
+text-decoration:none;
+color:white;
+box-shadow:0 0 15px rgba(0,0,0,.3);
+}
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+padding:15px;
+}
+
+nav{
+margin-top:10px;
+}
+
+nav a{
+margin:0 8px;
+font-size:14px;
+}
+
+.left h1{
+font-size:42px;
+}
+
+.right img{
+width:220px;
+height:220px;
+}
+
+}
+</style>
 
 <script>
-const words = [
+const words=[
 "AI Learner",
 "Web Developer",
 "Mobile Repair",
 "Video Editor"
 ];
 
-let i = 0;
+let i=0;
 
-function changeText() {
-  document.getElementById("typing").textContent = words[i];
-  i = (i + 1) % words.length;
+function typingAnimation(){
+document.getElementById("typing").textContent=words[i];
+i=(i+1)%words.length;
 }
 
-changeText();
-setInterval(changeText, 2000);
+typingAnimation();
+setInterval(typingAnimation,2000);
 </script>
 
 </body>
 </html>
+   
