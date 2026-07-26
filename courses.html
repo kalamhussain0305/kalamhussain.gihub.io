@@ -1,50 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Courses</title>
+<title>Mobile Repair Courses</title>
+
 <style>
 body{
-font-family:Arial,sans-serif;
-background:#f5f5f5;
 margin:0;
-padding:20px;
+font-family:Arial,sans-serif;
+background:#0b1120;
+color:#fff;
 }
-h1{
+
+header{
+background:#111827;
+padding:20px;
 text-align:center;
+color:#00d4ff;
+font-size:28px;
+font-weight:bold;
 }
+
+.container{
+width:90%;
+max-width:900px;
+margin:20px auto;
+}
+
 .card{
-background:white;
+background:#1b2435;
 padding:20px;
-margin:15px auto;
-max-width:700px;
-border-radius:10px;
-box-shadow:0 2px 8px rgba(0,0,0,.1);
+margin-bottom:20px;
+border-radius:15px;
+box-shadow:0 0 15px rgba(0,212,255,.25);
 }
-a{
+
+.card h2{
+color:#00d4ff;
+margin-top:0;
+}
+
+.card p{
+color:#ddd;
+}
+
+.btn{
 display:inline-block;
-padding:10px 15px;
-background:#0d6efd;
-color:white;
+padding:10px 20px;
+background:#00c853;
+color:#fff;
 text-decoration:none;
-border-radius:5px;
+border-radius:8px;
+font-weight:bold;
+margin-top:10px;
+}
+
+.btn:hover{
+background:#00a844;
 }
 </style>
+
 </head>
+
 <body>
 
-<h1>📚 Mobile Repair Courses</h1>
+<header>
+📚 Mobile Repair Courses
+</header>
+
+<div class="container">
 
 <div class="card">
-<h2>Chapter 2.1 - Resistor</h2>
-<p>Resistor Theory, Testing and Practical.</p>
-<a href="resistor.html">Open Lesson</a>
+<h2>📘 Chapter 2.1 - Resistor</h2>
+<p>Resistor की पूरी जानकारी, Testing और Repair.</p>
+<a class="btn" href="resistor.html">Open Chapter</a>
 </div>
 
 <div class="card">
-<h2>Chapter 2.2 - Capacitor</h2>
-<p>Coming Soon</p>
+<h2>📗 Chapter 2.2 - Capacitor</h2>
+<p>Coming Soon...</p>
+</div>
+
+<div class="card">
+<h2>📙 Chapter 2.3 - Diode</h2>
+<p>Coming Soon...</p>
+</div>
+
+<div class="card">
+<h2>📕 Chapter 2.4 - Coil</h2>
+<p>Coming Soon...</p>
+</div>
+
+<div class="card">
+<h2>📒 Chapter 2.5 - Transistor</h2>
+<p>Coming Soon...</p>
+</div>
+
 </div>
 
 </body>
