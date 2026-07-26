@@ -228,7 +228,7 @@ Through Hole Resistor में रंगों (Color Bands) से उसक�
     </div>
     <span>🟫</span>
     <div style="width:60px;height:4px;background:#555;"></div>
-    <<span id="led">⚫</span>
+    <span id="led">⚫</span>
 </div>
 
 <button onclick="startAnimation(let led = document.getElementById("led");)"
@@ -242,7 +242,7 @@ style="padding:10px 20px;font-size:16px;border:none;border-radius:8px;background
 function startAnimation(){
 
 let flow=document.getElementById("flow");
-let status=document.getElementById("status");
+let led=document.getElementById("led");
 
 status.innerHTML="⚡ Current Battery से निकलकर Resistor की ओर जा रहा है...";
 
