@@ -217,6 +217,56 @@ Through Hole Resistor में रंगों (Color Bands) से उसक�
 </div>
 
 </div>
+<h2>⚡ Current Flow Animation</h2>
 
+<p>नीचे Start बटन दबाइए और देखिए कि Current Resistor से होकर कैसे गुजरता है।</p>
+
+<div style="display:flex;align-items:center;gap:15px;font-size:40px;margin:20px 0;">
+    <span>🔋</span>
+    <div style="width:60px;height:4px;background:#555;position:relative;overflow:hidden;">
+        <div id="flow" style="width:15px;height:4px;background:yellow;position:absolute;left:-15px;"></div>
+    </div>
+    <span>🟫</span>
+    <div style="width:60px;height:4px;background:#555;"></div>
+    <span>💡</span>
+</div>
+
+<button onclick="startAnimation()"
+style="padding:10px 20px;font-size:16px;border:none;border-radius:8px;background:#00b894;color:white;">
+▶ Start Animation
+</button>
+
+<p id="status"></p>
+
+<script>
+function startAnimation(){
+
+let flow=document.getElementById("flow");
+let status=document.getElementById("status");
+
+status.innerHTML="⚡ Current Battery से निकलकर Resistor की ओर जा रहा है...";
+
+flow.style.left="-15px";
+
+let x=-15;
+
+let timer=setInterval(function(){
+
+x+=2;
+
+flow.style.left=x+"px";
+
+if(x>60){
+
+clearInterval(timer);
+
+status.innerHTML="✅ Current Resistor से होकर गुजर गया। Resistor ने Current को नियंत्रित किया और LED सुरक्षित रूप से जल गई।";
+
+}
+
+},30);
+
+}
+</script>
 </body>
 </html>
