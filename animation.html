@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resistor Circuit Animation</title>
+
+<style>
+body{
+background:#0b1220;
+font-family:Arial,sans-serif;
+color:white;
+margin:0;
+padding:20px;
+}
+
+.container{
+max-width:1100px;
+margin:auto;
+}
+
+h1{
+text-align:center;
+color:#00d4ff;
+}
+
+.info{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:15px;
+margin:30px 0;
+}
+
+.card{
+background:#141d2e;
+padding:20px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 0 12px rgba(0,255,255,.2);
+}
+
+.card h2{
+margin:0;
+color:#00d4ff;
+}
+
+.card p{
+font-size:28px;
+font-weight:bold;
+margin-top:10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>⚡ Resistor Circuit Animation</h1>
+
+<div class="info">
+
+<div class="card">
+<h2>Voltage</h2>
+<p>5V</p>
+</div>
+
+<div class="card">
+<h2>Resistor</h2>
+<p>220Ω</p>
+</div>
+
+<div class="card">
+<h2>Current</h2>
+<p>22mA</p>
+</div>
+
+<div class="card">
+<h2>LED Status</h2>
+<p id="ledstatus">OFF</p>
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
