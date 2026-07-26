@@ -36,6 +36,58 @@ Crystal मोबाइल का <b>Time Keeper (घड़ी)</b> है।
 </p>
 
 <h2>याद रखें</h2>
+<hr>
+
+<h2>⚙️ Crystal कैसे काम करता है?</h2>
+
+<p>
+Crystal अपने आप बिजली नहीं बनाता। जब PMIC या Mobile Circuit इसे Power देता है, तब यह बहुत तेज़ गति से कंपन (Vibration) करना शुरू करता है।
+</p>
+
+<p>
+यह कंपन एक <b>Clock Signal</b> बनाता है। यही Signal CPU और दूसरे IC तक पहुँचता है।
+</p>
+
+<h3>📖 आसान उदाहरण</h3>
+
+<p>
+मान लीजिए एक शिक्षक (CPU) 50 छात्रों (दूसरे IC) को एक साथ पढ़ा रहे हैं।
+अगर कोई घंटी या टाइम बताने वाला न हो, तो हर छात्र अपनी मर्ज़ी से काम करेगा।
+</p>
+
+<p>
+लेकिन जैसे ही स्कूल की घंटी बजती है, सभी एक ही समय पर काम शुरू करते हैं।
+</p>
+
+<p>
+मोबाइल में यही काम <b>Crystal</b> करता है। यह Clock Signal देकर सभी IC को एक साथ सही समय पर काम करवाता है।
+</p>
+
+<h3>🔄 Signal Flow</h3>
+
+<pre>
+⚡ Power
+   │
+   ▼
+🔷 Crystal
+   │
+   ▼
+⏰ Clock Signal
+   │
+   ▼
+🧠 CPU
+   │
+   ▼
+📱 Mobile Starts Working
+</pre>
+
+<h3>💡 याद रखें</h3>
+
+<ul>
+  <li>✅ Crystal = Clock Signal Generator</li>
+  <li>✅ CPU को Timing देता है</li>
+  <li>✅ Network, Wi-Fi और Bluetooth भी Crystal की Timing पर निर्भर करते हैं</li>
+</ul>
 
 <p>
 <b>Crystal = मोबाइल की घड़ी (Clock)</b>
