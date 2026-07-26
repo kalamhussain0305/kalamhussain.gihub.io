@@ -228,10 +228,10 @@ Through Hole Resistor में रंगों (Color Bands) से उसक�
     </div>
     <span>🟫</span>
     <div style="width:60px;height:4px;background:#555;"></div>
-    <span>💡</span>
+    <<span id="led">⚫</span>
 </div>
 
-<button onclick="startAnimation()"
+<button onclick="startAnimation(let led = document.getElementById("led");)"
 style="padding:10px 20px;font-size:16px;border:none;border-radius:8px;background:#00b894;color:white;">
 ▶ Start Animation
 </button>
@@ -256,7 +256,7 @@ x+=2;
 
 flow.style.left=x+"px";
 
-if(x>60){
+if(x>60){led.innerHTML = "💡";
 
 clearInterval(timer);
 
