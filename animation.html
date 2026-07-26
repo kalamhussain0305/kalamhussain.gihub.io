@@ -83,6 +83,80 @@ margin-top:10px;
 </div>
 
 </div>
+<h2 style="text-align:center;color:#00ff99;">⚡ Live Circuit</h2>
+
+<div id="circuit" style="
+background:#111827;
+padding:30px;
+border-radius:15px;
+margin-top:20px;
+text-align:center;
+font-size:45px;
+">
+
+🔋
+<span style="color:gray;">────────</span>
+
+<span id="dot1" style="color:gray;">●</span>
+
+<span style="color:gray;">────────</span>
+
+🟫
+
+<span style="color:gray;">────────</span>
+
+<span id="dot2" style="color:gray;">●</span>
+
+<span style="color:gray;">────────</span>
+
+<span id="bulb">⚫</span>
+
+</div>
+
+<div style="text-align:center;margin-top:25px;">
+
+<button onclick="playCircuit()"
+style="padding:12px 20px;background:#16a34a;color:white;border:none;border-radius:8px;font-size:18px;">
+▶ Play
+</button>
+
+<button onclick="resetCircuit()"
+style="padding:12px 20px;background:#dc2626;color:white;border:none;border-radius:8px;font-size:18px;">
+🔄 Reset
+</button>
+
+</div>
+<script>
+
+function playCircuit(){
+
+document.getElementById("dot1").style.color="yellow";
+
+setTimeout(function(){
+
+document.getElementById("dot2").style.color="yellow";
+
+},600);
+
+setTimeout(function(){
+
+document.getElementById("bulb").innerHTML="💡";
+document.getElementById("ledstatus").innerHTML="ON";
+
+},1200);
+
+}
+
+function resetCircuit(){
+
+document.getElementById("dot1").style.color="gray";
+document.getElementById("dot2").style.color="gray";
+document.getElementById("bulb").innerHTML="⚫";
+document.getElementById("ledstatus").innerHTML="OFF";
+
+}
+
+</script>
 
 </body>
 </html>
