@@ -160,5 +160,38 @@ Crystal बदलने से पहले हमेशा उसकी Supply 
 <p>
 यदि Mobile Dead है और Crystal के पास Voltage मौजूद है लेकिन Clock Signal नहीं बन रहा, तो Crystal खराब होने की संभावना रहती है।
 </p>
+<hr>
+
+<h2>❌ Crystal खराब होने के लक्षण (Fault Symptoms)</h2>
+
+<h3>1. Mobile ON नहीं होता</h3>
+<p>
+यदि Crystal Clock Signal नहीं बनाएगा, तो CPU सही तरह से काम शुरू नहीं कर पाएगा। इससे मोबाइल Dead या Logo पर अटक सकता है।
+</p>
+
+<h3>2. Network नहीं आता</h3>
+<p>
+RF Section में लगा Crystal खराब होने पर Mobile में Network की समस्या हो सकती है।
+</p>
+
+<h3>3. Wi-Fi और Bluetooth काम नहीं करते</h3>
+<p>
+Wi-Fi/Bluetooth Circuit को भी सही Clock Signal की आवश्यकता होती है। Crystal खराब होने पर ये Features बंद हो सकते हैं।
+</p>
+
+<h3>4. Date और Time की समस्या</h3>
+<p>
+RTC Crystal खराब होने पर मोबाइल का समय और तारीख सही नहीं रह सकती।
+</p>
+
+<h3>5. Mobile बार-बार Restart होना</h3>
+<p>
+कभी-कभी खराब Crystal के कारण मोबाइल बार-बार Restart या Hang भी हो सकता है।
+</p>
+
+<div style="background:#fff3cd;padding:15px;border-left:5px solid orange;border-radius:8px;">
+<b>⚠️ महत्वपूर्ण:</b><br>
+हर बार इन समस्याओं का कारण Crystal नहीं होता। PMIC, CPU, Power Supply या आसपास के Components भी जिम्मेदार हो सकते हैं। इसलिए हमेशा Testing करके ही Crystal बदलें।
+</div>
 </body>
 </html>
