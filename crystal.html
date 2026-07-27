@@ -193,5 +193,43 @@ RTC Crystal खराब होने पर मोबाइल का समय
 <b>⚠️ महत्वपूर्ण:</b><br>
 हर बार इन समस्याओं का कारण Crystal नहीं होता। PMIC, CPU, Power Supply या आसपास के Components भी जिम्मेदार हो सकते हैं। इसलिए हमेशा Testing करके ही Crystal बदलें।
 </div>
+<hr>
+
+<h2>🔧 Crystal Repair Tips</h2>
+
+<h3>1. पहले Visual Inspection करें</h3>
+<p>
+सबसे पहले Microscope से Crystal और उसके आसपास के Components को ध्यान से देखें।
+अगर Crack, Rust, Burn या Component Missing हो तो पहले उसे ठीक करें।
+</p>
+
+<h3>2. Supply Voltage Check करें</h3>
+<p>
+Multimeter से देखें कि Crystal को Power Supply मिल रही है या नहीं।
+अगर Supply ही नहीं है, तो Crystal बदलने से समस्या ठीक नहीं होगी।
+</p>
+
+<h3>3. Clock Signal Check करें</h3>
+<p>
+यदि Oscilloscope उपलब्ध है, तो Crystal का Output Waveform देखें।
+अगर Waveform नहीं मिल रही है, तो Crystal या उसके Circuit में Fault हो सकता है।
+</p>
+
+<h3>4. सही Frequency वाला Crystal लगाएँ</h3>
+<p>
+Crystal बदलते समय हमेशा उसी Frequency (जैसे 26MHz, 24MHz या 32.768KHz) वाला नया Crystal लगाएँ।
+</p>
+
+<h3>5. Heat का ध्यान रखें</h3>
+<p>
+Hot Air Gun से Crystal निकालते समय अधिक Heat न दें।
+ज्यादा Heat से PCB Track और आसपास के Components खराब हो सकते हैं।
+</p>
+
+<div style="background:#d1ecf1;padding:15px;border-left:5px solid #17a2b8;border-radius:8px;">
+<b>💡 Golden Rule:</b><br>
+बिना Testing किए कभी भी Crystal Replace न करें।
+पहले Supply, Ground और आसपास के Components को Check करें।
+</div>
 </body>
 </html>
