@@ -120,5 +120,45 @@ Crystal मोबाइल के अलग-अलग भागों में 
 <p>
 जहाँ CPU, Network IC या Wi-Fi IC होगा, उसके आसपास आपको Crystal मिलने की संभावना रहती है।
 </p>
+<hr>
+
+<h2>🧪 Crystal Testing (Practical)</h2>
+
+<h3>आवश्यक Tools</h3>
+
+<ul>
+<li>🔹 Digital Multimeter</li>
+<li>🔹 DC Power Supply</li>
+<li>🔹 Oscilloscope (सबसे अच्छा Tool)</li>
+<li>🔹 Microscope</li>
+</ul>
+
+<h3>Multimeter से Testing</h3>
+
+<p>
+सिर्फ Multimeter से Crystal सही है या खराब, यह पूरी तरह पता नहीं चलता।
+Multimeter से केवल Short Circuit और Physical Damage की जाँच की जाती है।
+</p>
+
+<h3>Oscilloscope से Testing</h3>
+
+<p>
+Oscilloscope की Probe Crystal के Output Pin पर लगाई जाती है।
+अगर Screen पर Waveform दिखाई दे, तो Crystal काम कर रहा है।
+अगर कोई Waveform नहीं दिखाई दे, तो Crystal या उसके आसपास का Circuit खराब हो सकता है।
+</p>
+
+<h3>⚠️ ध्यान दें</h3>
+
+<p>
+Crystal बदलने से पहले हमेशा उसकी Supply Voltage और आसपास के Components की जाँच करें।
+कई बार समस्या Crystal में नहीं बल्कि PMIC, CPU या आसपास के Capacitor में होती है।
+</p>
+
+<h3>💡 Practical Tip</h3>
+
+<p>
+यदि Mobile Dead है और Crystal के पास Voltage मौजूद है लेकिन Clock Signal नहीं बन रहा, तो Crystal खराब होने की संभावना रहती है।
+</p>
 </body>
 </html>
