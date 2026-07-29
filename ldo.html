@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LDO (Low Dropout Regulator)</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="hero">
+<h1>📘 Chapter - LDO (Low Dropout Regulator)</h1>
+
+<p>
+LDO Mobile Motherboard ka ek bahut important Voltage Regulator hai.
+Yeh IC alag-alag Components ko Clean aur Stable Voltage provide karta hai.
+</p>
+
+</header>
+
+<div class="container">
+
+<div class="card">
+
+<h2>1. LDO Kya Hota Hai?</h2>
+
+<p>
+
+<b>LDO (Low Dropout Regulator)</b> ek Linear Voltage Regulator hai.
+
+Iska kaam High Voltage ko Low, Stable aur Noise-Free Voltage me convert karna hota hai.
+
+</p>
+
+<p>
+
+Mobile Motherboard me CPU, RAM, Camera, Display, SIM, Audio jaise IC ko
+alag-alag Voltage chahiye hota hai.
+
+Ye Stable Voltage LDO provide karta hai.
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h2>2. LDO Kyun Lagaya Jata Hai?</h2>
+
+<p>
+
+Battery lagbhag <b>4.2V</b> deti hai.
+
+Lekin Mobile ke har IC ko 4.2V nahi diya ja sakta.
+
+Har IC ka apna Voltage Requirement hota hai.
+
+</p>
+
+<table border="1" width="100%">
+
+<tr>
+<th>Component</th>
+<th>Voltage</th>
+</tr>
+
+<tr>
+<td>CPU</td>
+<td>0.8V - 1.2V</td>
+</tr>
+
+<tr>
+<td>RAM</td>
+<td>1.1V - 1.8V</td>
+</tr>
+
+<tr>
+<td>SIM</td>
+<td>1.8V</td>
+</tr>
+
+<tr>
+<td>Camera</td>
+<td>2.8V</td>
+</tr>
+
+<tr>
+<td>Display</td>
+<td>3.0V</td>
+</tr>
+
+</table>
+
+<p>
+
+Isi wajah se Motherboard me LDO ka use kiya jata hai.
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h2>3. Buck Converter vs LDO</h2>
+
+<table border="1" width="100%">
+
+<tr>
+
+<th>Buck Converter</th>
+
+<th>LDO</th>
+
+</tr>
+
+<tr>
+
+<td>Efficiency High</td>
+
+<td>Efficiency Kam</td>
+
+</tr>
+
+<tr>
+
+<td>Current Zyada de sakta hai</td>
+
+<td>Current Limited hota hai</td>
+
+</tr>
+
+<tr>
+
+<td>Switching Noise hota hai</td>
+
+<td>Output bahut Clean hota hai</td>
+
+</tr>
+
+<tr>
+
+<td>CPU Main Supply</td>
+
+<td>Camera, Audio, SIM jaise Circuit</td>
+
+</tr>
+
+</table>
+
+</div>
+
+
+<div class="card">
+
+<h2>4. Real Life Example</h2>
+
+<p>
+
+Sochiye ek badi Water Tank hai.
+
+</p>
+
+<ul>
+
+<li>Water Tank = Battery</li>
+
+<li>Main Pipe = PMIC</li>
+
+<li>Water Regulator = LDO</li>
+
+<li>Room = CPU / Camera / SIM</li>
+
+</ul>
+
+<p>
+
+Jaise har Room me alag Pressure chahiye,
+
+waise hi Mobile ke har IC ko alag Voltage chahiye.
+
+Ye kaam LDO karta hai.
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h2>Quick Revision</h2>
+
+<ul>
+
+<li>✔ LDO = Low Dropout Regulator</li>
+
+<li>✔ Stable Voltage deta hai</li>
+
+<li>✔ Noise kam karta hai</li>
+
+<li>✔ Camera, SIM, Audio, Display me use hota hai</li>
+
+<li>✔ PMIC ke sath milkar kaam karta hai</li>
+
+</ul>
+
+</div>
+
+<a href="#" class="btn">Next → Part 2</a>
+<!-- ========================= -->
+<!-- PART 2 START -->
+<!-- ========================= -->
+
+<div class="card">
+
+<h2>5. 5-Pin LDO Pin Configuration</h2>
+
+<pre>
+
+           _________
+ VIN  ----|         |---- VOUT
+ EN   ----|   LDO   |
+ GND  ----|_________|
+
+</pre>
+
+<table border="1" width="100%">
+
+<tr>
+<th>Pin</th>
+<th>Full Name</th>
+<th>Kaam</th>
+</tr>
+
+<tr>
+<td>VIN</td>
+<td>Input Voltage</td>
+<td>PMIC ya Battery se Voltage leta hai.</td>
+</tr>
+
+<tr>
+<td>EN</td>
+<td>Enable</td>
+<td>LDO ko ON ya OFF karta hai.</td>
+</tr>
+
+<tr>
+<td>GND</td>
+<td>Ground</td>
+<td>Current ka Return Path.</td>
+</tr>
+
+<tr>
+<td>VOUT</td>
+<td>Output Voltage</td>
+<td>Stable Voltage IC ko deta hai.</td>
+</tr>
+
+<tr>
+<td>FB*</td>
+<td>Feedback</td>
+<td>Output Voltage ko Stable rakhta hai (Har LDO me nahi hota).</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="card">
+
+<h2>6. Har Pin Ko Aasan Example Se Samjhiye</h2>
+
+<p><b>VIN</b><br>
+Jaise Water Tank se Pipe me paani aata hai,
+waise hi VIN se LDO ke andar Voltage aata hai.
+</p>
+
+<p><b>EN (Enable)</b><br>
+Jaise Room ka Switch ON karte hi Light jalti hai,
+waise hi EN High hote hi LDO Start ho jata hai.
+</p>
+
+<p><b>GND</b><br>
+Jaise Paani wapas Drain se nikal jata hai,
+waise hi Current GND ke through Return hota hai.
+</p>
+
+<p><b>VOUT</b><br>
+Ye LDO ka Final Stable Output hota hai.
+Isi Voltage se CPU, Camera, RAM ya SIM kaam karte hain.
+</p>
+
+<p><b>FB (Feedback)</b><br>
+Ye Output Voltage ko Monitor karta hai.
+Agar Voltage kam ya zyada ho jaye to LDO usko Correct karta hai.
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>7. LDO Working Flow (Step by Step)</h2>
+
+<pre>
+
+Battery (4.2V)
+      │
+      ▼
+ PMIC / Power IC
+      │
+      ▼
+    VIN
+      │
+      ▼
+     LDO
+      │
+      ▼
+ Stable VOUT
+      │
+      ▼
+CPU / RAM / Camera / SIM
+
+</pre>
+
+<ol>
+
+<li>Battery Voltage deti hai.</li>
+
+<li>PMIC decide karta hai kis LDO ko ON karna hai.</li>
+
+<li>EN Signal High hota hai.</li>
+
+<li>VIN se Voltage LDO ke andar jata hai.</li>
+
+<li>LDO Voltage ko Filter aur Regulate karta hai.</li>
+
+<li>Clean aur Stable Voltage VOUT se bahar aata hai.</li>
+
+<li>Ye Voltage CPU, RAM, Camera ya SIM ko Supply hota hai.</li>
+
+</ol>
+
+</div>
+
+<div class="card">
+
+<h2>8. Mobile Boot Ke Time LDO Kab ON Hota Hai?</h2>
+
+<p>
+
+Jab Power Button Press karte hain,
+
+PMIC Step-by-Step alag-alag LDO ko ON karta hai.
+
+</p>
+
+<pre>
+
+Power Key
+     │
+     ▼
+PMIC Start
+     │
+     ▼
+Enable Signal
+     │
+     ▼
+LDO ON
+     │
+     ▼
+CPU ON
+     │
+     ▼
+RAM ON
+     │
+     ▼
+Display ON
+
+</pre>
+
+<p>
+
+Agar kisi Step par LDO ON nahi hua,
+to Mobile Boot nahi karega ya wahi ruk jayega.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>💡 Important Tip</h2>
+
+<ul>
+
+<li>VIN hai lekin EN nahi → PMIC ya CPU Enable nahi de raha.</li>
+
+<li>VIN aur EN dono hain lekin VOUT nahi → LDO ya Output Line me Problem.</li>
+
+<li>VOUT hai lekin Mobile ka Part kaam nahi kar raha → Aage ki Circuit Check karein.</li>
+
+</ul>
+
+</div>
+
+<!-- ========================= -->
+<!-- PART 2 END -->
+<!-- ========================= -->
+  <!-- ========================= -->
+<!-- PART 3 START -->
+<!-- ========================= -->
+
+<div class="card">
+
+<h2>9. Practical Testing (Cold Testing)</h2>
+
+<p><b>Phone OFF Condition</b></p>
+
+<p>
+Multimeter ko <b>Diode Mode</b> me rakhiye.
+</p>
+
+<table border="1" width="100%">
+
+<tr>
+<th>Test Point</th>
+<th>Normal</th>
+<th>Fault</th>
+</tr>
+
+<tr>
+<td>VIN → GND</td>
+<td>Board ke hisab se Diode Value milegi</td>
+<td>000 / Beep = Short</td>
+</tr>
+
+<tr>
+<td>VOUT → GND</td>
+<td>Diode Value milegi</td>
+<td>000 / Beep = Short</td>
+</tr>
+
+<tr>
+<td>EN → GND</td>
+<td>Diode Value milegi</td>
+<td>000 / Beep = Short</td>
+</tr>
+
+</table>
+
+<p>
+
+✔ Agar Multimeter lagatar Beep kare ya 000 dikhaye,
+to us Line me Short ho sakta hai.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>10. Practical Testing (Hot Testing)</h2>
+
+<p><b>Phone ON Condition</b></p>
+
+<p>
+
+Multimeter ko <b>DC Voltage Mode</b> me rakhiye.
+
+Black Probe = Ground
+
+Red Probe = Test Point
+
+</p>
+
+<table border="1" width="100%">
+
+<tr>
+
+<th>Pin</th>
+
+<th>Expected Result</th>
+
+</tr>
+
+<tr>
+
+<td>VIN</td>
+
+<td>Input Voltage aana chahiye</td>
+
+</tr>
+
+<tr>
+
+<td>EN</td>
+
+<td>High Voltage aana chahiye</td>
+
+</tr>
+
+<tr>
+
+<td>VOUT</td>
+
+<td>Stable Output Voltage milna chahiye</td>
+
+</tr>
+
+</table>
+
+</div>
+
+<div class="card">
+
+<h2>11. Troubleshooting Rule</h2>
+
+<table border="1" width="100%">
+
+<tr>
+
+<th>VIN</th>
+
+<th>EN</th>
+
+<th>VOUT</th>
+
+<th>Conclusion</th>
+
+</tr>
+
+<tr>
+
+<td>❌</td>
+
+<td>❌</td>
+
+<td>❌</td>
+
+<td>PMIC ya Power Line Problem</td>
+
+</tr>
+
+<tr>
+
+<td>✔</td>
+
+<td>❌</td>
+
+<td>❌</td>
+
+<td>CPU / PMIC Enable Signal Missing</td>
+
+</tr>
+
+<tr>
+
+<td>✔</td>
+
+<td>✔</td>
+
+<td>❌</td>
+
+<td>LDO ya Output Short</td>
+
+</tr>
+
+<tr>
+
+<td>✔</td>
+
+<td>✔</td>
+
+<td>✔</td>
+
+<td>LDO Normal Hai</td>
+
+</tr>
+
+</table>
+
+</div>
+
+<div class="card">
+
+<h2>12. Fault Finding Flow</h2>
+
+<pre>
+
+Phone Dead
+
+     │
+
+     ▼
+
+VIN Check
+
+     │
+
+     ├── No → PMIC / Power Line
+
+     │
+
+     ▼
+
+EN Check
+
+     │
+
+     ├── No → CPU / PMIC Enable
+
+     │
+
+     ▼
+
+VOUT Check
+
+     │
+
+     ├── No → LDO ya Output Short
+
+     │
+
+     ▼
+
+Output Present
+
+     │
+
+     ▼
+
+Aage ki Circuit Check Kare
+
+</pre>
+
+</div>
+
+<div class="card">
+
+<h2>13. Real Repair Example</h2>
+
+<p>
+
+<b>Case :</b> Camera Open nahi ho raha.
+
+</p>
+
+<ul>
+
+<li>Camera LDO ka VIN Check kare.</li>
+
+<li>EN Signal Check kare.</li>
+
+<li>VOUT Check kare.</li>
+
+<li>Agar tino theek hain to Camera Connector ya Camera IC Check kare.</li>
+
+</ul>
+
+<hr>
+
+<p>
+
+<b>Case :</b> SIM Detect nahi ho rahi.
+
+</p>
+
+<ul>
+
+<li>SIM LDO Check kare.</li>
+
+<li>SIM VCC Voltage Measure kare.</li>
+
+<li>Enable Signal Verify kare.</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<h2>⚠ Important Repair Tips</h2>
+
+<ul>
+
+<li>❌ Sirf VOUT dekhkar LDO Replace mat kariye.</li>
+
+<li>✔ Sabse pehle VIN Check kariye.</li>
+
+<li>✔ Fir EN Signal Check kariye.</li>
+
+<li>✔ Fir VOUT Check kariye.</li>
+
+<li>✔ Agar Output Short hai to pehle Short Remove kariye.</li>
+
+<li>✔ Bina Measurement ke IC Replace karna sahi Practice nahi hai.</li>
+
+</ul>
+
+</div>
+
+<!-- ========================= -->
+<!-- PART 3 END -->
+<!-- ========================= -->
+  <!-- ========================= -->
+<!-- PART 4 START -->
+<!-- ========================= -->
+
+<div class="card">
+
+<h2>14. Motherboard Me LDO Kaise Pehchane?</h2>
+
+<p><b>Board View aur Schematic me LDO ko kaise dhoondhe:</b></p>
+
+<ul>
+<li>✔ PMIC ke aas-paas search kare.</li>
+<li>✔ Naam jaise LDO, VREG, VDD, VCC dekh sakte hain.</li>
+<li>✔ Output line CPU, Camera, SIM, Display ya Audio IC ki taraf jati hai.</li>
+<li>✔ VIN line PMIC ya Battery Supply se aati hai.</li>
+<li>✔ EN line PMIC ya CPU se aati hai.</li>
+</ul>
+
+</div>
+
+<div class="card">
+
+<h2>15. Common LDO Faults</h2>
+
+<table border="1" width="100%">
+
+<tr>
+<th>Problem</th>
+<th>Possible Reason</th>
+</tr>
+
+<tr>
+<td>Phone Dead</td>
+<td>Main LDO Supply Missing</td>
+</tr>
+
+<tr>
+<td>Camera Not Working</td>
+<td>Camera LDO Fault</td>
+</tr>
+
+<tr>
+<td>Display Black</td>
+<td>Display LDO Missing</td>
+</tr>
+
+<tr>
+<td>SIM Not Detect</td>
+<td>SIM LDO Fault</td>
+</tr>
+
+<tr>
+<td>No Audio</td>
+<td>Audio LDO Fault</td>
+</tr>
+
+<tr>
+<td>Phone Restart</td>
+<td>Unstable LDO Output</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="card">
+
+<h2>16. Common Mistakes</h2>
+
+<ul>
+
+<li>❌ Measurement kiye bina LDO Replace kar dena.</li>
+
+<li>❌ VIN Check kiye bina VOUT dekhna.</li>
+
+<li>❌ EN Signal Ignore kar dena.</li>
+
+<li>❌ Output Short Check na karna.</li>
+
+<li>❌ Sirf IC badal dena, Line Check na karna.</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<h2>17. Quick Revision</h2>
+
+<ul>
+
+<li>✔ LDO = Low Dropout Regulator</li>
+
+<li>✔ Stable aur Low Noise Voltage deta hai.</li>
+
+<li>✔ VIN = Input Voltage</li>
+
+<li>✔ EN = Enable Signal</li>
+
+<li>✔ VOUT = Stable Output</li>
+
+<li>✔ GND = Return Path</li>
+
+<li>✔ VIN + EN hai lekin VOUT nahi → LDO ya Output Line Fault.</li>
+
+<li>✔ VIN hi nahi → PMIC ya Power Line Check.</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<h2>18. Quiz</h2>
+
+<ol>
+
+<li>LDO ka Full Form kya hai?</li>
+
+<li>VIN ka kaam kya hai?</li>
+
+<li>EN Signal kisliye hota hai?</li>
+
+<li>VOUT kis Component ko Supply deta hai?</li>
+
+<li>Camera nahi chal raha ho to sabse pehle kya Check karenge?</li>
+
+<li>VIN hai lekin EN nahi hai. Fault kahan ho sakta hai?</li>
+
+<li>VIN aur EN dono hain lekin VOUT nahi hai. Kya Problem ho sakti hai?</li>
+
+<li>LDO aur Buck Converter me ek Difference likhiye.</li>
+
+<li>Cold Testing kis Mode me karte hain?</li>
+
+<li>Hot Testing kis Mode me karte hain?</li>
+
+</ol>
+
+</div>
+
+<div class="card">
+
+<h2>19. Key Points</h2>
+
+<p>
+
+LDO Mobile Motherboard ka ek bahut Important Linear Voltage Regulator hai.
+
+Ye PMIC se Input Voltage lekar CPU, RAM, Camera, SIM, Audio aur Display jaise Circuits ko Stable aur Clean Voltage deta hai.
+
+Fault Finding me hamesha is Sequence ko Follow kare:
+
+<b>VIN → EN → VOUT → Load</b>
+
+Isi Rule ko Follow karne se LDO Fault bahut aasani se Diagnose kiya ja sakta hai.
+
+</p>
+
+</div>
+
+<br>
+
+<a href="courses.html" class="btn">⬅ Back to Courses</a>
+
+<!-- ========================= -->
+<!-- PART 4 END -->
+<!-- ========================= -->
+
+</div>
+
+</body>
+  </html>
+</div>
+
+</body>
+</html>
