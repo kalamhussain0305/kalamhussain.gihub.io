@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Poster Prompt | AI Prompt Mastery</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#0b1120;
+color:#fff;
+}
+
+header{
+background:#111827;
+padding:20px;
+text-align:center;
+}
+
+header h1{
+color:#00d4ff;
+}
+
+.container{
+width:90%;
+max-width:900px;
+margin:30px auto;
+}
+
+.card{
+background:#1b2435;
+padding:20px;
+margin-bottom:20px;
+border-radius:15px;
+box-shadow:0 0 15px rgba(0,212,255,.2);
+}
+
+h2{
+color:#00d4ff;
+margin-bottom:10px;
+}
+
+.prompt{
+background:#101827;
+padding:15px;
+border-radius:10px;
+color:#7CFC00;
+white-space:pre-wrap;
+}
+
+button{
+margin-top:15px;
+padding:12px 20px;
+background:#00c853;
+border:none;
+border-radius:8px;
+color:white;
+font-weight:bold;
+cursor:pointer;
+}
+
+button:hover{
+background:#00a844;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>🖼 Poster Prompt</h1>
+
+<p>AI Prompt Mastery</p>
+
+</header>
+
+<div class="container">
+
+<div class="card">
+
+<h2>📖 Description</h2>
+
+<p>Create professional posters for business, events, offers and social media using AI.</p>
+
+</div>
+
+<div class="card">
+
+<h2>📋 Ready Prompt</h2>
+
+<div class="prompt" id="prompt">
+
+Create a premium modern promotional poster for a mobile repair shop.
+
+Include:
+
+• Blue and Black Theme
+
+• Professional Layout
+
+• Mobile Repair Icons
+
+• Attractive Headline
+
+• Contact Number Area
+
+• Offer Badge
+
+• Social Media Icons
+
+• Ultra HD 4K Quality
+
+</div>
+
+<button onclick="copyPrompt()">
+
+📋 Copy Prompt
+
+</button>
+
+</div>
+
+<div class="card">
+
+<h2>💡 Tips</h2>
+
+<ul>
+
+<li>Change business name.</li>
+
+<li>Change colors.</li>
+
+<li>Add your logo.</li>
+
+<li>Mention poster size (A4, Instagram, Banner).</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<script>
+
+function copyPrompt(){
+
+let text=document.getElementById("prompt").innerText;
+
+navigator.clipboard.writeText(text);
+
+alert("✅ Prompt Copied!");
+
+}
+
+</script>
+
+</body>
+</html>
