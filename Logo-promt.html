@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Logo Prompt | AI Prompt Mastery</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#0b1120;
+color:#fff;
+line-height:1.8;
+}
+
+header{
+background:#111827;
+padding:20px;
+text-align:center;
+box-shadow:0 0 15px rgba(0,212,255,.3);
+}
+
+header h1{
+color:#00d4ff;
+}
+
+.container{
+width:90%;
+max-width:900px;
+margin:30px auto;
+}
+
+.card{
+background:#1b2435;
+padding:25px;
+border-radius:15px;
+box-shadow:0 0 15px rgba(0,212,255,.2);
+margin-bottom:20px;
+}
+
+h2{
+color:#00d4ff;
+margin-bottom:10px;
+}
+
+.prompt-box{
+background:#101827;
+padding:15px;
+border-radius:10px;
+white-space:pre-wrap;
+color:#7CFC00;
+margin-top:15px;
+}
+
+button{
+margin-top:15px;
+padding:12px 22px;
+background:#00c853;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+font-size:16px;
+font-weight:bold;
+}
+
+button:hover{
+background:#00a844;
+}
+
+footer{
+text-align:center;
+padding:20px;
+color:#888;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>🎨 Logo Prompt</h1>
+<p>AI Prompt Mastery</p>
+</header>
+
+<div class="container">
+
+<div class="card">
+
+<h2>📖 Description</h2>
+
+<p>
+Use this prompt to create a modern professional logo using ChatGPT, Gemini, Claude, Midjourney, DALL·E or other AI image generators.
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>📋 Ready Prompt</h2>
+
+<div class="prompt-box" id="prompt">
+
+Create a modern, premium and minimal logo for a brand named "Taj Mobile".
+
+Style:
+• Clean
+• Blue and White
+• Flat Vector
+• Transparent Background
+• Professional Typography
+• 4K High Quality
+
+</div>
+
+<button onclick="copyPrompt()">
+📋 Copy Prompt
+</button>
+
+</div>
+
+<div class="card">
+
+<h2>💡 Tips</h2>
+
+<ul>
+
+<li>Change the brand name.</li>
+
+<li>Change the colors.</li>
+
+<li>Add your own style.</li>
+
+<li>Mention logo type if required.</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<footer>
+
+© AI Prompt Mastery
+
+</footer>
+
+<script>
+
+function copyPrompt(){
+
+const text=document.getElementById("prompt").innerText;
+
+navigator.clipboard.writeText(text);
+
+alert("✅ Prompt Copied Successfully!");
+
+}
+
+</script>
+
+</body>
+</html>
