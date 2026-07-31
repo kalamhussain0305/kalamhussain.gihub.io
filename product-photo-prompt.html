@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Photo Prompt | AI Prompt Mastery</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#0b1120;
+color:white;
+line-height:1.8;
+}
+
+header{
+background:#111827;
+padding:20px;
+text-align:center;
+box-shadow:0 0 15px rgba(0,212,255,.3);
+}
+
+header h1{
+color:#00d4ff;
+}
+
+.container{
+width:90%;
+max-width:900px;
+margin:30px auto;
+}
+
+.card{
+background:#1b2435;
+padding:20px;
+border-radius:15px;
+margin-bottom:20px;
+box-shadow:0 0 15px rgba(0,212,255,.2);
+}
+
+h2{
+color:#00d4ff;
+margin-bottom:10px;
+}
+
+.prompt-box{
+background:#101827;
+padding:15px;
+border-radius:10px;
+white-space:pre-wrap;
+color:#7CFC00;
+}
+
+button{
+margin-top:15px;
+padding:12px 22px;
+background:#00c853;
+color:white;
+border:none;
+border-radius:8px;
+font-weight:bold;
+cursor:pointer;
+}
+
+button:hover{
+background:#00a844;
+}
+
+.nav{
+display:flex;
+justify-content:space-between;
+margin-top:25px;
+}
+
+.nav a{
+text-decoration:none;
+background:#2196F3;
+color:white;
+padding:10px 20px;
+border-radius:8px;
+font-weight:bold;
+}
+
+footer{
+text-align:center;
+padding:20px;
+color:#999;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>📦 Product Photo Prompt</h1>
+
+<p>AI Prompt Mastery</p>
+
+</header>
+
+<div class="container">
+
+<div class="card">
+
+<h2>📖 Description</h2>
+
+<p>Create premium e-commerce product photos using AI.</p>
+
+</div>
+
+<div class="card">
+
+<h2>📋 Ready Prompt</h2>
+
+<div class="prompt-box" id="prompt">
+
+Create a premium studio-quality product photo.
+
+Product: Smartphone
+
+Background: Clean White
+
+Lighting: Soft Studio Lighting
+
+Camera: DSLR Quality
+
+Reflection: Soft
+
+Ultra HD 8K
+
+Highly Detailed
+
+Professional Product Photography
+
+E-commerce Ready
+
+</div>
+
+<button onclick="copyPrompt()">
+
+📋 Copy Prompt
+
+</button>
+
+</div>
+
+<div class="card">
+
+<h2>💡 Tips</h2>
+
+<ul>
+
+<li>Use the exact product name.</li>
+
+<li>Mention background color.</li>
+
+<li>Add camera angle if needed.</li>
+
+<li>Specify resolution (4K or 8K).</li>
+
+</ul>
+
+</div>
+
+<div class="nav">
+
+<a href="passport-photo-prompt.html">⬅ Previous</a>
+
+<a href="background-remove.html">Next ➜</a>
+
+</div>
+
+</div>
+
+<footer>
+
+© AI Prompt Mastery
+
+</footer>
+
+<script>
+
+function copyPrompt(){
+
+let text=document.getElementById("prompt").innerText;
+
+navigator.clipboard.writeText(text);
+
+alert("✅ Prompt Copied Successfully!");
+
+}
+
+</script>
+
+</body>
+</html>
