@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Prompts | AI Prompt Mastery</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#0b1120;
+color:#fff;
+}
+
+header{
+background:#111827;
+padding:20px;
+text-align:center;
+box-shadow:0 0 15px rgba(0,212,255,.3);
+}
+
+header h1{
+color:#00d4ff;
+font-size:32px;
+}
+
+.search{
+width:90%;
+max-width:500px;
+margin:20px auto;
+display:block;
+padding:12px;
+border:none;
+border-radius:8px;
+font-size:16px;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:20px auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:20px;
+}
+
+.card{
+background:#1b2435;
+padding:20px;
+border-radius:15px;
+box-shadow:0 0 15px rgba(0,212,255,.2);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+box-shadow:0 0 20px rgba(0,212,255,.5);
+}
+
+.card h2{
+color:#00d4ff;
+margin-bottom:10px;
+}
+
+.card p{
+color:#ddd;
+margin-bottom:15px;
+}
+
+.btn{
+display:inline-block;
+padding:10px 18px;
+background:#00c853;
+color:#fff;
+text-decoration:none;
+border-radius:8px;
+font-weight:bold;
+}
+
+.btn:hover{
+background:#00a844;
+}
+
+footer{
+text-align:center;
+padding:20px;
+color:#888;
+}
+  /* Navigation */
+
+.navbar{
+background:#111827;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 30px;
+position:sticky;
+top:0;
+z-index:1000;
+box-shadow:0 2px 10px rgba(0,212,255,.3);
+}
+
+.logo{
+font-size:24px;
+font-weight:bold;
+color:#00d4ff;
+}
+
+.menu{
+display:flex;
+list-style:none;
+gap:18px;
+flex-wrap:wrap;
+}
+
+.menu a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+transition:.3s;
+}
+
+.menu a:hover{
+color:#00d4ff;
+}
+
+@media(max-width:768px){
+
+.navbar{
+flex-direction:column;
+}
+
+.menu{
+justify-content:center;
+margin-top:15px;
+}
+
+  }
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>📸 Image Prompts</h1>
+<p>Choose a Prompt Category</p>
+</header>
+
+<input type="text" class="search" placeholder="🔍 Search Prompt...">
+
+<div class="container">
+
+<div class="card">
+<h2>🎨 Logo Prompt</h2>
+<p>Create professional AI logo prompts.</p>
+<a class="btn" href="logo-prompt.html">Open</a>
+</div>
+
+<div class="card">
+<h2>🖼 Poster Prompt</h2>
+<p>Generate marketing posters.</p>
+<a class="btn" href="poster-prompt.html">Open</a>
+</div>
+
+<div class="card">
+<h2>📺 Thumbnail Prompt</h2>
+<p>Create YouTube thumbnails.</p>
+<a class="btn" href="thumbnail-prompt.html">Open</a>
+</div>
+
+<div class="card">
+<h2>🪪 Passport Photo</h2>
+<p>Create passport-size photos.</p>
+<a class="btn" href="passport-photo-prompt.html">Open</a>
+</div>
+
+<div class="card">
+<h2>📦 Product Photo</h2>
+<p>Create product photography prompts.</p>
+<a class="btn" href="product-photo-prompt.html">Open</a>
+</div>
+
+<div class="card">
+<h2>🪄 Background Remove</h2>
+<p>Remove image background.</p>
+<a class="btn" href="background-remove.html">Open</a>
+</div>
+
+<div class="card">
+<h2>🌄 Background Change</h2>
+<p>Replace photo backgrounds.</p>
+<a class="btn" href="background-change.html">Open</a>
+</div>
+
+<div class="card">
+<h2>📷 Realistic Photo</h2>
+<p>Create ultra realistic images.</p>
+<a class="btn" href="realistic-photo.html">Open</a>
+</div>
+
+<div class="card">
+<h2>🎌 Anime Prompt</h2>
+<p>Anime style image prompts.</p>
+<a class="btn" href="anime-prompt.html">Open</a>
+</div>
+
+<div class="card">
+<h2>🌸 Ghibli Prompt</h2>
+<p>Studio Ghibli inspired prompts.</p>
+<a class="btn" href="ghibli-prompt.html">Open</a>
+</div>
+
+<div class="card">
+<h2>🎭 Cartoon Prompt</h2>
+<p>Cartoon character prompts.</p>
+<a class="btn" href="cartoon-prompt.html">Open</a>
+</div>
+
+<div class="card">
+<h2>🧸 Pixar Style</h2>
+<p>Pixar animation prompts.</p>
+<a class="btn" href="pixar-prompt.html">Open</a>
+</div>
+
+</div>
+
+<footer>
+© 2026 AI Prompt Mastery
+</footer>
+
+</body>
+  <nav class="navbar">
+
+<div class="logo">
+🤖 AI Prompt Mastery
+</div>
+
+<ul class="menu">
+
+<li><a href="index.html">🏠 Home</a></li>
+
+<li><a href="image-prompts.html">📸 Image</a></li>
+
+<li><a href="video-prompts.html">🎬 Video</a></li>
+
+<li><a href="website-prompts.html">💻 Website</a></li>
+
+<li><a href="writing-prompts.html">✍️ Writing</a></li>
+
+<li><a href="office-prompts.html">📊 Office</a></li>
+
+<li><a href="business-prompts.html">💼 Business</a></li>
+
+<li><a href="chatgpt-prompts.html">🤖 ChatGPT</a></li>
+
+</ul>
+
+  </nav>
+</html>
